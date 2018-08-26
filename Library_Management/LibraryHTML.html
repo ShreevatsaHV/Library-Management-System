@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="LibraryCSS.css" type="text/css" rel="stylesheet" />
+		<link href="lib.jpg" type="image/jpg" rel="shortcut icon" /> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="Lib.js"></script>
+		<title>Library Management</title>
+	</head>
+	<body>
+	<div class="header">
+          <a class="sections" href="#checkout">Check Out</a>
+          <a class="sections" href="#checkin">Check In</a>
+          <a class="sections" href="#fine">Fines</a>
+          <a class="sections" href="#borrow">Sign Up</a>
+      </div>
+	
+	<div class="image2">
+      <img src="l.jpg" width="100%" height="200" alt="Profile picture"/>
+      </div>
+	
+
+	<div id="divs">
+		<header><h3>Search</h3></header>
+		<form>
+			<label>Search for : </label><input type="text" name="details_search" id="details_search" size="160"/>
+			<!--<input type="submit" name="submit" id="submit" value="Submit"/>-->
+			<button type="button" class="btn" id="btn_search" style="width:70px">Go</button>
+			<br>
+			<div id="searchdiv" align="center">
+			</div>
+		</form>
+	</div>
+	
+	<div>
+		<header id="checkout"><h3>Check Out</h3></header>
+		<form action="LibCheckOut.php" method="post" >
+		<table>
+			<tr><td><label>Enter book ISBN : </label></td><td><input type="text" name="isbn_checkout" id="isbn_checkout" size="40"/></td></tr>
+			<tr><td><label>Enter Card Number : </label></td><td><input type="text" name="card_id_checkout" id="card_id_checkout" size="40"/></td></tr>
+		</table>
+			<br></br>
+			<button type="button" class="btn" id="btn_checkout">Check Out</button>
+			<div id="checkoutdiv">
+			</div>			
+		</form>
+	</div>
+	
+	<div>
+		<header id="checkin"><h3>Check In</h3></header>
+		<form action="LibCheckin.php" method="post">
+			<tr><td><label>Enter Details : </label></td><td><input type="text" name="details_checkin" id="details_checkin" size="40"/></td></tr>
+			<br></br>
+			<!--<input type="submit" name="submit" id="submit" value="Submit"/>-->	
+			<button type="button" class="btn" id="btn_checkin">Search Books to Check In</button>	
+			<br></br>
+			<div id="checkindiv">
+			</div>
+			<!--<input type="submit" name="submit" id="submit" value="Submit"/>-->
+			<button type="button" class="btn" id="btn_cin">Check In</button>
+		</form>
+	</div>
+	
+	<div>
+		<header id="fine"><h3>Fines</h3></header>
+		<form action="LibFines1.php" method="post">
+		<table>
+			<!--<tr><td><label>Enter book ISBN : </label></td><td><input type="text" name="isbn_fine" id="isbn_fine" size="40"/></td></tr>-->
+			<tr><td><label>Card ID : </label></td><td><input type="text" name="fine_card" id="fine_card" size="40"/></td></tr>
+			<tr><td><label>Select option : </label></td><td><select id="option" name="option" style="width:175px;height:23px">
+				<option value="refreshfine">Refresh fines</option>
+				<option value="findfine">Find fine amount</option>
+				<option value="display">Display fines</option>	
+			</select></td></tr>
+		</table>
+		<br></br>
+			<!--<input type="submit" name="submit" id="submit" value="Submit"/>-->
+			<button type="button" class="btn" id="btn_finec" align="center">Submit</button>
+			<br></br>
+			<div id="finediv">
+			</div>	
+			<button type="button" class="btn" id="btn_fine2">Pay Fine</button>		
+		</form>
+	</div>
+	
+	<div>
+		<header id="borrow"><h3>Borrower Sign Up</h3></header>
+		<form action="LibBorrower.php" method="post">
+		<table>
+			<tr><td><label>Enter Name : </label></td><td><input type="text" name="firstname" id="firstname" size="40"/></td></tr>
+			<tr><td><label>Enter SSN : </label></td><td><input type="text" name="bssn" id="bssn" size="40" placeholder="xxx-xx-xxxx"/></td></tr>
+			<tr><td><label>Enter Address : </label></td><td><input type="text" name="streetad" id="streetad" size="40"/></td></tr>
+			<tr><td><label>Enter Email ID : </label></td><td><input type="text" name="emailid" id="emailid" size="40"/></td></tr>
+			<tr><td><label>Enter Phone : </label></td><td><input type="text" name="phoneno" id="phoneno" size="40"/></td></tr>
+		</table>	
+			<!--<input type="submit" name="submit" id="submit" value="Submit"/>-->
+			<br></br>
+			<button type="button" class="btn" id="btn_borrow">Sign Up</button>
+			<br></br>
+			<div id="borrowdiv">
+			</div>
+		</form>
+	</div>
+	<div class="footer">
+      <h6>Copyright Shreevatsa H V</h6>
+      </div>
+	
+	</body>
+</html>
